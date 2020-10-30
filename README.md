@@ -33,6 +33,10 @@ I would summarize it as simplified, extended and adapted to the current version 
 
 ## Example usage
 
+1. On RegexFinder tab load tsv file containing list of patterns. 
+2. In example the following pattern `AIza[0-9A-Za-z-_]{35}`. That pattern matches Google API key.
+3. When you look through the pages, extension is going to add an issue if there is a match. 
+4. You can then verify found Google API key using [gmapsapiscanner](https://github.com/ozguralp/gmapsapiscanner).   
 
 ## Building Your Own Regex File
 
