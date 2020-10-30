@@ -18,7 +18,10 @@ Issue name is category assigned by the tester.
 Issue description contains details about the pattern and description assigned by the tester.
 List of patterns can be uploaded as tab-delimited file (.tsv, .tab) file. 
 It can also be filled manually by adding / removing values.
-Example tab-delimited file included [here](). 
+Example tab-delimited file included [here](https://github.com/lwierzbicki/RegexFinder/blob/main/burp.regex.tsv). 
+
+I would summarize it as simplified, extended and adapted to the current version of Burp Suite extension originally created by [August Detlefsen](https://github.com/augustd). 
+
 
 ## Installation
 
