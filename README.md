@@ -16,6 +16,9 @@ Each pattern has category and description.
 If extension found pattern in HTTP response, it adds an issue.
 Issue name is category assigned by the tester. 
 Issue description contains details about the pattern and description assigned by the tester.
+List of patterns can be uploaded as tab-delimited file (.tsv, .tab) file. 
+It can also be filled manually by adding / removing values.
+Example tab-delimited file included [here](). 
 
 ## Installation
 
@@ -28,9 +31,37 @@ Issue description contains details about the pattern and description assigned by
 ## Example usage
 
 
-  
+## Building Your Own Regex File
 
-##  Setup environment
+### Error messages
+
+Good starting point is original list used for [Error Message Checks](https://github.com/augustd/burp-suite-error-message-checks) located [here](https://github.com/augustd/burp-suite-error-message-checks/blob/master/src/main/resources/burp/match-rules.tab).
+
+### Software versions
+
+Good starting point is original list used for [Software Version Checks](https://github.com/augustd/burp-suite-software-version-checks) located [here](https://github.com/augustd/burp-suite-software-version-checks/blob/master/src/main/resources/burp/match-rules.tab).  
+
+### Reflected values
+
+Extension [Reflection Tracer](https://github.com/securityewok/Reflection-Tracer) uses the following pattern `tr4c3[a-z0-9]{8}`. You can create any value which can be distinguished using regular expression and add it to the file with list of patterns.
+
+### Javascript functions
+
+### API keys
+
+Good starting point are the following repos:
+
+- [RegExAPI by odomojuli](https://github.com/odomojuli/RegExAPI)
+- [RegHex by l4yton](https://github.com/l4yton/RegHex)
+
+How these API keys can be used:
+
+- [Keyhacks by streaak](https://github.com/streaak/keyhacks)
+- [PayloadsAllTheThings by swisskyrepo](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/API%20Key%20Leaks)
+
+### Information disclosure
+
+##  Dev Setup
 
 ### Set up project in IDEA IntelliJ (Community Edition)
 
