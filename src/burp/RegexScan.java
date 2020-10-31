@@ -47,7 +47,7 @@ public class RegexScan implements IScannerCheck {
                         baseRequestResponse,
                         url,
                         rule.getName(),
-                        "<b>" + rule.getDescription() + "</b> found using pattern <b>" + rule.getPattern().toString() + "</b><br>"));
+                        "<b>" + rule.getDescription() + "</b> found <b>" + matcher.group() + "</b> using pattern <b>" + rule.getPattern().toString() + "</b><br>"));
             }
         }
 

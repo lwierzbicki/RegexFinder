@@ -145,3 +145,4 @@ Software version	IBM TeaLeaf	 X-TeaLeaf-UIEventCapture-Version: ([\d.]+)
 API key	Amazon Web Services	AKIA[0-9A-Z]{16}
 API key	Google Cloud Platform	[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}
 API key	Google API key	AIza[0-9A-Za-z-_]{35}
+API key	Secret key	SECRET\_KEY

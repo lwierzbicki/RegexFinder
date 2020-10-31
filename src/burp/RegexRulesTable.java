@@ -48,6 +48,34 @@ public class RegexRulesTable extends javax.swing.JPanel {
         model.addTableModelListener(new TableModelListener() {
             @Override
             public void tableChanged(TableModelEvent e) {
+                if (TableModelEvent.UPDATE == e.getType()) {
+                    mCallbacks.printOutput(e.toString());
+                    int row = e.getFirstRow();
+                    int column = e.getColumn();
+                    mCallbacks.printOutput("row: " + row + " column: " + column + " value: " + model.getValueAt(row, column));
+                    RegexRule rule = scan.getRegexRule(row);
+                    mCallbacks.printOutput("rule 1: " + rule);
+                    if (rule == null) {
+                        rule = new RegexRule("", "", Pattern.compile("."));
+                        scan.addRegexRule(rule);
+                    }
+                    mCallbacks.printOutput("rule 2: " + rule);
+
+                    switch (column) {
+                        case 0:
+                            rule.setName((String) model.getValueAt(row, column));
+                            break;
+                        case 1:
+                            rule.setDescription((String) model.getValueAt(row, column));
+                            break;
+                        case 2:
+                            mCallbacks.printOutput("new pattern: " + (String) model.getValueAt(row, column));
+                            rule.setPattern(Pattern.compile((String) model.getValueAt(row, column)));
+                            break;
+                        default:
+                            break;
+                    }
+                }
             }
         });
     }
