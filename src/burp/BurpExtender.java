@@ -1,5 +1,6 @@
 package burp;
 
+
 /**
  * Burp Extender definition
  */
